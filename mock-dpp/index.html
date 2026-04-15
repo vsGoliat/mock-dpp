@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mineral Wool 035 Light | Knauf Insulation — Digital Product Passport</title>
+  <meta name="description" content="Digital Product Passport for Knauf Insulation Mineral Wool 035 Light — verified environmental and product data.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+  <style>
+    :root {
+      --green: #D4F542;
+      --green-hover: #c5e63a;
+      --text-primary: #111827;
+      --text-secondary: #374151;
+      --text-muted: #6B7280;
+      --text-light: #9CA3AF;
+      --border: #E5E7EB;
+      --border-light: #F3F4F6;
+      --bg-page: #F3F4F6;
+      --bg-card: #FFFFFF;
+      --bg-surface: #F9FAFB;
+      --success: #059669;
+      --role-public: #6B7280;
+      --role-planner: #2563EB;
+      --role-recycler: #059669;
+      --role-manufacturer: #D97706;
+      --role-regulator: #7C3AED;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg-page);
+      color: var(--text-primary);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+      padding: 24px 16px 80px;
+    }
+
+    .card-main {
+      max-width: 720px;
+      margin: 0 auto;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 32px;
+    }
+    @media (max-width: 520px) { .card-main { padding: 20px 16px; } }
+
+    /* ─── Top actions ─── */
+    .top-actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-bottom: 24px;
+    }
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      height: 34px;
+      padding: 0 14px;
+      background: var(--green);
+      border: none;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .share-btn:hover { background: var(--green-hover); }
+    .share-btn svg { width: 14px; height: 14px; }
+
+    /* ─── Product header ─── */
+    .product-header-top {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      margin-bottom: 24px;
+    }
+    .product-header-text { flex: 1; min-width: 0; }
+    .product-image { flex-shrink: 0; width: 140px; }
+    .product-image img { width: 100%; height: auto; display: block; }
+    @media (max-width: 480px) {
+      .product-header-top { flex-direction: column-reverse; align-items: center; text-align: center; }
+      .product-image { width: 120px; }
+    }
+    .product-title {
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+    .product-subtitle { font-size: 14px; color: var(--text-muted); font-weight: 400; }
+
+    .product-meta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 32px;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 480px) { .product-meta { grid-template-columns: 1fr; } }
+    .meta-field { padding: 10px 0; border-bottom: 1px solid var(--border-light); }
+    .meta-field-label {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-light);
+      margin-bottom: 3px;
+    }
+    .meta-field-value {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .meta-field-value svg { width: 14px; height: 14px; color: var(--text-light); flex-shrink: 0; }
+    .meta-value-green { color: var(--success); }
+
+    .product-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+    .tag {
+      display: inline-block;
+      padding: 4px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+    .tag-ce { background: #DCFCE7; border-color: #BBF7D0; color: #166534; }
+
+    .product-docs { display: flex; gap: 8px; flex-wrap: wrap; }
+    .doc-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      cursor: pointer;
+      transition: border-color 0.15s;
+    }
+    .doc-link:hover { border-color: var(--text-light); }
+    .doc-link svg { width: 14px; height: 14px; color: var(--text-light); }
+
+    /* ─── Sections ─── */
+    .section { padding: 28px 0; border-top: 1px solid var(--border); }
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      gap: 8px;
+    }
+    .section-header-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+    .section-title { font-size: 18px; font-weight: 600; color: var(--text-primary); }
+
+    /* ─── Access tier badge on section headers ─── */
+    .tier-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 2px 7px;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      border: 1px solid;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .tier-badge svg { width: 11px; height: 11px; }
+    .tier-public { color: var(--role-public); border-color: #D1D5DB; background: #F9FAFB; }
+    .tier-planner { color: var(--role-planner); border-color: #BFDBFE; background: #EFF6FF; }
+    .tier-recycler { color: var(--role-recycler); border-color: #A7F3D0; background: #ECFDF5; }
+    .tier-manufacturer { color: var(--role-manufacturer); border-color: #FDE68A; background: #FFFBEB; }
+    .tier-regulator { color: var(--role-regulator); border-color: #C4B5FD; background: #F5F3FF; }
+
+    /* ─── Locked field (inline, within a visible section) ─── */
+    .locked-field-value {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-light);
+    }
+    .locked-field-value svg { width: 13px; height: 13px; flex-shrink: 0; }
+
+    /* ─── Locked section overlay ─── */
+    .locked-section { position: relative; border: 1px solid var(--border); overflow: hidden; }
+    .locked-bg {
+      padding: 20px;
+      filter: blur(5px);
+      opacity: 0.35;
+      user-select: none;
+      pointer-events: none;
+    }
+    .locked-bg p { font-size: 13px; color: var(--text-muted); margin-bottom: 6px; line-height: 1.5; }
+    .locked-bg strong { color: var(--text-secondary); }
+    .locked-fg {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.35);
+    }
+    .locked-icon svg { width: 20px; height: 20px; color: var(--text-muted); }
+    .locked-title { font-size: 14px; font-weight: 600; color: var(--text-primary); }
+    .locked-desc { font-size: 12px; color: var(--text-muted); text-align: center; max-width: 280px; line-height: 1.4; }
+    .locked-btn {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 7px 14px;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      font-family: inherit; font-size: 13px; font-weight: 600;
+      color: var(--text-secondary); cursor: pointer;
+    }
+    .locked-btn:hover { border-color: var(--text-light); }
+
+    /* Unlocked version of previously-locked sections */
+    .unlocked-content { padding: 0; }
+    .unlocked-content p { font-size: 13px; color: var(--text-muted); margin-bottom: 6px; line-height: 1.5; }
+    .unlocked-content strong { color: var(--text-secondary); font-size: 13px; }
+    .unlocked-content .detail-block { padding: 16px; border: 1px solid var(--border-light); margin-bottom: 8px; }
+    .unlocked-content .detail-block:last-child { margin-bottom: 0; }
+
+    /* ─── Role-based visibility ─── */
+    [data-role] { transition: opacity 0.25s ease; }
+    .role-hidden { display: none !important; }
+    .role-locked .locked-fg { display: flex; }
+    .role-unlocked .locked-fg { display: none; }
+    .role-unlocked .locked-bg { filter: none; opacity: 1; pointer-events: auto; user-select: auto; }
+
+    /* ─── GWP display ─── */
+    .gwp-header {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 12px; margin-bottom: 20px;
+    }
+    .gwp-indicator-label { font-size: 15px; font-weight: 600; color: var(--text-primary); }
+    .gwp-total { font-size: 15px; font-weight: 600; color: var(--text-primary); }
+    .gwp-total-num { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; margin-right: 4px; }
+    .gwp-total-unit { font-size: 13px; font-weight: 500; color: var(--text-muted); }
+    .gwp-scope { font-size: 12px; color: var(--text-light); margin-bottom: 20px; }
+
+    .view-toggles { display: flex; gap: 4px; }
+    .view-toggle {
+      width: 32px; height: 32px;
+      display: flex; align-items: center; justify-content: center;
+      border: 1px solid var(--border); background: var(--bg-card); cursor: pointer;
+    }
+    .view-toggle:hover { border-color: var(--text-light); }
+    .view-toggle.active { background: var(--text-primary); border-color: var(--text-primary); }
+    .view-toggle.active svg { stroke: #fff; }
+    .view-toggle svg { width: 14px; height: 14px; stroke: var(--text-muted); }
+
+    .gwp-bars { margin-bottom: 8px; }
+    .gwp-bar-row {
+      display: grid; grid-template-columns: 140px 1fr 60px;
+      align-items: center; gap: 12px; padding: 8px 0;
+    }
+    @media (max-width: 480px) { .gwp-bar-row { grid-template-columns: 100px 1fr 50px; gap: 8px; } }
+    .gwp-bar-label { font-size: 12px; color: var(--text-muted); line-height: 1.3; }
+    .gwp-bar-label strong { display: block; font-weight: 600; color: var(--text-secondary); font-size: 13px; }
+    .gwp-bar-track { height: 24px; background: var(--bg-surface); position: relative; overflow: hidden; }
+    .gwp-bar-fill { height: 100%; transition: width 1s ease-out; }
+    .gwp-bar-val { font-size: 13px; font-weight: 600; color: var(--text-primary); text-align: right; font-variant-numeric: tabular-nums; }
+
+    .gwp-verified-row {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 8px; margin-top: 16px; padding-top: 16px;
+      border-top: 1px solid var(--border-light);
+    }
+    .verified-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 500; color: var(--success); }
+    .verified-badge svg { width: 14px; height: 14px; }
+    .copy-btn {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 6px 12px; border: 1px solid var(--border); background: var(--bg-card);
+      font-family: inherit; font-size: 12px; font-weight: 500; color: var(--text-muted); cursor: pointer;
+    }
+    .copy-btn:hover { border-color: var(--text-light); }
+    .copy-btn svg { width: 13px; height: 13px; }
+
+    .gwp-sub-table { margin-top: 16px; width: 100%; border-collapse: collapse; }
+    .gwp-sub-table th {
+      text-align: left; font-size: 10px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.05em; color: var(--text-light); padding: 8px 10px;
+      border-bottom: 1px solid var(--border); background: var(--bg-surface);
+    }
+    .gwp-sub-table th:nth-child(3), .gwp-sub-table th:nth-child(4) { text-align: right; }
+    .gwp-sub-table td { font-size: 13px; padding: 9px 10px; border-bottom: 1px solid var(--border-light); }
+    .gwp-sub-table tr:last-child td { border-bottom: none; }
+    .gwp-sub-table .td-name { font-weight: 500; color: var(--text-primary); }
+    .gwp-sub-table .td-abbr { font-weight: 500; color: var(--text-muted); font-size: 12px; }
+    .gwp-sub-table .td-val { font-weight: 600; color: var(--text-primary); font-variant-numeric: tabular-nums; text-align: right; }
+    .gwp-sub-table .td-unit { color: var(--text-light); font-size: 11px; text-align: right; }
+
+    /* ─── Accordion ─── */
+    .accordion-group { display: flex; flex-direction: column; gap: 6px; }
+    .accordion { border: 1px solid var(--border); overflow: hidden; }
+    .accordion-trigger {
+      display: flex; align-items: center; justify-content: space-between;
+      width: 100%; padding: 12px 14px; border: none; background: var(--bg-card);
+      cursor: pointer; font-family: inherit; font-size: 14px; font-weight: 600;
+      color: var(--text-primary); text-align: left;
+    }
+    .accordion-trigger:hover { background: var(--bg-surface); }
+    .accordion-trigger-left { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .accordion-phase { font-size: 12px; color: var(--text-light); font-weight: 500; }
+    .accordion-chevron { width: 16px; height: 16px; color: var(--text-light); transition: transform 0.2s ease; flex-shrink: 0; }
+    .accordion.open .accordion-chevron { transform: rotate(180deg); }
+    .accordion-panel { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    .accordion.open .accordion-panel { max-height: 1400px; }
+    .accordion-inner { padding: 0 14px 14px; }
+    .accordion-note { font-size: 11px; color: var(--text-light); margin-bottom: 10px; }
+
+    .phase-badge { display: inline-block; padding: 2px 8px; font-size: 10px; font-weight: 600; background: var(--bg-surface); border: 1px solid var(--border); color: var(--text-muted); }
+    .phase-badge-active { background: #DCFCE7; border-color: #BBF7D0; color: #166534; }
+    .phase-badge-ready { background: #DBEAFE; border-color: #BFDBFE; color: #1E40AF; }
+
+    /* ─── dtable ─── */
+    .dtable { width: 100%; border-collapse: collapse; }
+    .dtable th { text-align: left; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-light); padding: 8px 10px; border-bottom: 1px solid var(--border); background: var(--bg-surface); }
+    .dtable th.r { text-align: right; }
+    .dtable td { font-size: 13px; padding: 9px 10px; border-bottom: 1px solid var(--border-light); }
+    .dtable tr:last-child td { border-bottom: none; }
+    .dtable .td-name { font-weight: 500; color: var(--text-primary); }
+    .dtable .td-abbr { font-weight: 500; color: var(--text-muted); font-size: 12px; }
+    .dtable .td-val { font-weight: 600; color: var(--text-primary); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+    .dtable .td-unit { color: var(--text-light); font-size: 11px; text-align: right; white-space: nowrap; }
+
+    /* ─── Material ─── */
+    .material-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    @media (max-width: 520px) { .material-grid { grid-template-columns: 1fr; } }
+    .material-block { text-align: center; }
+    .material-block-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-light); margin-bottom: 16px; }
+    .ring-wrap { position: relative; width: 150px; height: 150px; margin: 0 auto; }
+    .ring-wrap svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+    .ring-wrap circle { fill: none; stroke-linecap: round; }
+    .ring-track { stroke: var(--border-light); stroke-width: 10; }
+    .ring-fill { stroke: var(--green); stroke-width: 10; transition: stroke-dashoffset 1.4s ease-out; }
+    .ring-center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .ring-pct { font-size: 30px; font-weight: 700; line-height: 1; }
+    .ring-label { font-size: 11px; color: var(--text-light); font-weight: 500; margin-top: 2px; }
+    .chart-wrap { width: 100%; max-width: 210px; margin: 0 auto; }
+    .reach-note { display: flex; align-items: center; gap: 8px; margin-top: 20px; padding: 10px 12px; background: var(--bg-surface); border: 1px solid var(--border-light); font-size: 12px; color: var(--text-muted); }
+    .reach-note svg { flex-shrink: 0; width: 16px; height: 16px; color: var(--success); }
+    .reach-note.is-locked { background: #F8FAFC; border-color: #E2E8F0; position: relative; }
+    .reach-note.is-locked span { filter: blur(1.8px); user-select: none; color: #94A3B8; }
+    .reach-note.is-locked::after {
+      content: "Requires " attr(data-min-role) " access";
+      margin-left: auto;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-light);
+    }
+    .material-details {
+      margin-top: 22px;
+      display: grid;
+      gap: 10px;
+    }
+    .material-detail-item {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 10px 12px;
+      border: 1px solid var(--border-light);
+      background: #fff;
+    }
+    .material-detail-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .material-detail-value {
+      text-align: right;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .material-detail-item.is-locked {
+      background: var(--bg-surface);
+    }
+    .material-detail-item.is-locked .material-detail-value {
+      color: var(--text-light);
+      filter: blur(1.8px);
+      user-select: none;
+    }
+    .material-detail-item.is-locked .material-detail-label {
+      color: #94A3B8;
+    }
+    .material-detail-lock {
+      display: none;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: var(--text-light);
+      white-space: nowrap;
+    }
+    .material-detail-item.is-locked .material-detail-lock {
+      display: inline-flex;
+    }
+    .material-detail-lock svg { width: 13px; height: 13px; flex-shrink: 0; }
+    .material-lock-card {
+      margin-top: 18px;
+      border: 1px solid var(--border);
+      background: var(--bg-surface);
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .material-lock-card-main {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+    .material-lock-card-main svg { width: 16px; height: 16px; color: var(--text-light); flex-shrink: 0; }
+    .material-lock-card-main span {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+    .tier-mixed {
+      color: #475569;
+      border-color: #CBD5E1;
+      background: #F8FAFC;
+    }
+
+    /* ─── Specs ─── */
+    .specs-table { width: 100%; border-collapse: collapse; }
+    .specs-table td { padding: 12px 0; border-bottom: 1px solid var(--border-light); font-size: 14px; vertical-align: top; }
+    .specs-table tr:last-child td { border-bottom: none; }
+    .specs-table .spec-lbl { font-weight: 500; color: var(--text-light); width: 200px; font-size: 13px; }
+    .specs-table .spec-val { font-weight: 600; color: var(--text-primary); }
+    .specs-table .spec-note { font-size: 12px; color: var(--text-muted); font-weight: 400; margin-top: 2px; }
+    @media (max-width: 480px) { .specs-table .spec-lbl { width: 130px; } }
+
+    /* ─── Lifecycle ─── */
+    .lc-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .lc-table { border-collapse: collapse; width: 100%; min-width: 500px; }
+    .lc-table th, .lc-table td { text-align: center; padding: 8px 6px; font-size: 12px; border: 1px solid var(--border); }
+    .lc-table th { font-weight: 600; color: var(--text-muted); background: var(--bg-surface); font-size: 11px; }
+    .lc-table th:first-child, .lc-table td:first-child { text-align: left; font-weight: 600; color: var(--text-secondary); width: 70px; }
+    .lc-table td { font-weight: 500; color: var(--text-primary); }
+    .lc-declared { background: #F0FDF4; color: #166534; font-weight: 600; }
+    .lc-mnd { background: var(--bg-surface); color: var(--text-light); font-size: 10px; }
+    .lifecycle-note { margin-top: 10px; font-size: 12px; color: var(--text-light); }
+
+    /* ─── Footer meta ─── */
+    .footer-meta { padding: 24px 0 0; border-top: 1px solid var(--border); margin-top: 28px; }
+    .footer-meta-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    @media (max-width: 520px) { .footer-meta-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 380px) { .footer-meta-grid { grid-template-columns: 1fr; } }
+    .footer-field-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-light); margin-bottom: 4px; }
+    .footer-field-value { font-size: 13px; font-weight: 500; color: var(--text-secondary); }
+    .footer-badges { display: flex; flex-wrap: wrap; gap: 4px; }
+    .footer-badge { display: inline-block; padding: 3px 8px; font-size: 11px; font-weight: 500; background: var(--bg-surface); border: 1px solid var(--border); color: var(--text-muted); }
+
+    .page-footer {
+      max-width: 720px; margin: 16px auto 0; padding: 12px 0;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+    }
+    .page-footer-links { display: flex; gap: 16px; }
+    .page-footer-links a { font-size: 12px; color: var(--text-light); text-decoration: none; }
+    .page-footer-links a:hover { color: var(--text-muted); }
+    .page-footer-copy { font-size: 12px; color: var(--text-light); }
+
+    .brand-block {
+      margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    }
+    .brand-block-left { display: flex; align-items: center; gap: 10px; }
+    .brand-logo-icon { width: 28px; height: 28px; background: var(--green); display: flex; align-items: center; justify-content: center; }
+    .brand-logo-icon svg { width: 14px; height: 14px; }
+    .brand-name { font-size: 14px; font-weight: 700; color: var(--text-primary); }
+    .brand-tagline { font-size: 11px; color: var(--text-light); }
+
+    /* ═══════════════════════════════════════════
+       ROLE SWITCHER BAR
+       ═══════════════════════════════════════════ */
+    .role-bar {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 90;
+      background: var(--bg-card);
+      border-top: 1px solid var(--border);
+      padding: 8px 12px;
+    }
+    .role-bar-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .role-bar-label {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-light);
+      margin-bottom: 6px;
+      text-align: center;
+    }
+    .role-tabs {
+      display: flex;
+      gap: 0;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .role-tab {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      padding: 8px 4px;
+      border: none;
+      border-right: 1px solid var(--border);
+      background: var(--bg-card);
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--text-light);
+      transition: all 0.15s;
+      line-height: 1.2;
+    }
+    .role-tab:last-child { border-right: none; }
+    .role-tab:hover { background: var(--bg-surface); }
+    .role-tab svg { width: 16px; height: 16px; }
+    .role-tab.active {
+      background: var(--text-primary);
+      color: #fff;
+    }
+    .role-tab[data-r="public"].active { background: var(--role-public); }
+    .role-tab[data-r="planner"].active { background: var(--role-planner); }
+    .role-tab[data-r="recycler"].active { background: var(--role-recycler); }
+    .role-tab[data-r="manufacturer"].active { background: var(--role-manufacturer); }
+    .role-tab[data-r="regulator"].active { background: var(--role-regulator); }
+
+    @media (max-width: 480px) {
+      .role-tab { padding: 6px 2px; font-size: 9px; }
+      .role-tab svg { width: 14px; height: 14px; }
+    }
+
+    /* ─── Animations ─── */
+    .anim { opacity: 0; transform: translateY(10px); transition: opacity 0.45s ease, transform 0.45s ease; }
+    .anim.visible { opacity: 1; transform: none; }
+
+    /* ─── Print ─── */
+    @media print {
+      body { background: #fff; padding: 0; }
+      .card-main { border: none; max-width: 100%; }
+      .role-bar, .share-btn, .copy-btn { display: none !important; }
+      .anim { opacity: 1 !important; transform: none !important; }
+      .accordion-panel { max-height: 2000px !important; }
+      .locked-fg { display: none !important; }
+      .locked-bg { filter: none !important; opacity: 1 !important; }
+      .page-footer { display: none; }
+      .role-hidden { display: block !important; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="card-main">
+
+  <div class="top-actions anim">
+    <button class="share-btn" onclick="navigator.share?.({title:'DPP — Mineral Wool 035 Light',url:location.href}).catch(()=>{})">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+      Share
+    </button>
+  </div>
+
+  <!-- ═══ PRODUCT HEADER (PUBLIC) ═══ -->
+  <section class="anim" data-role="public">
+    <div class="product-header-top">
+      <div class="product-header-text">
+        <h1 class="product-title">Mineral Wool 035 Light</h1>
+        <p class="product-subtitle">Knauf Insulation — Rock Mineral Wool</p>
+      </div>
+      <div class="product-image">
+        <img src="assets/product.png" alt="Knauf Insulation Mineral Wool 035 Light">
+      </div>
+    </div>
+
+    <div class="product-meta">
+      <div class="meta-field">
+        <div class="meta-field-label">Manufacturer</div>
+        <div class="meta-field-value">Knauf Insulation GmbH</div>
+      </div>
+      <div class="meta-field">
+        <div class="meta-field-label">Valid Until</div>
+        <div class="meta-field-value meta-value-green">May 7, 2026</div>
+      </div>
+      <div class="meta-field">
+        <div class="meta-field-label">Produced In</div>
+        <div class="meta-field-value">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          St. Egidien, Germany
+        </div>
+      </div>
+      <div class="meta-field">
+        <div class="meta-field-label">Applicable In</div>
+        <div class="meta-field-value">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          Europe
+        </div>
+      </div>
+      <div class="meta-field">
+        <div class="meta-field-label">Category</div>
+        <div class="meta-field-value">Insulation materials · Rock Mineral Wool</div>
+      </div>
+      <div class="meta-field">
+        <div class="meta-field-label">Declared Unit</div>
+        <div class="meta-field-value">1 m² at 140 mm thickness</div>
+      </div>
+      <!-- Planner-only field -->
+      <div class="meta-field" data-role="planner">
+        <div class="meta-field-label">Batch / Lot Number</div>
+        <div class="meta-field-value" data-unlocked>KI-RMW-035-2025-B0447</div>
+        <div class="locked-field-value" data-locked-for="planner">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="1"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Requires Planner access
+        </div>
+      </div>
+      <!-- Manufacturer-only field -->
+      <div class="meta-field" data-role="manufacturer">
+        <div class="meta-field-label">Production Date</div>
+        <div class="meta-field-value" data-unlocked>2025-11-28 · Line 3</div>
+        <div class="locked-field-value" data-locked-for="manufacturer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="1"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Requires Manufacturer access
+        </div>
+      </div>
+    </div>
+
+    <div class="product-tags">
+      <span class="tag tag-ce">✓ CE Marked — EN 13162</span>
+      <span class="tag">EN 15804+A2</span>
+      <span class="tag">ISO 14025</span>
+      <span class="tag">EPD International</span>
+    </div>
+
+    <div class="product-docs">
+      <a class="doc-link" href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Digital EPD
+      </a>
+      <a class="doc-link" href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        PDF Report
+      </a>
+      <a class="doc-link" href="#" data-role="planner">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Technical Datasheet
+      </a>
+      <a class="doc-link" href="#" data-role="planner">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Installation Guide
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══ ENVIRONMENTAL IMPACT (PUBLIC for GWP; PLANNER for full lifecycle) ═══ -->
+  <section class="section anim" data-role="public">
+    <div class="section-header">
+      <div class="section-header-left">
+        <h2 class="section-title">Environmental Impact</h2>
+        <span class="tier-badge tier-public"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>Public</span>
+      </div>
+    </div>
+
+    <div class="gwp-header">
+      <div>
+        <div class="gwp-indicator-label">GWP-total (A1–A3)</div>
+        <div class="gwp-total">
+          <span class="gwp-total-num" id="gwpCounter">0.00</span>
+          <span class="gwp-total-unit">kg CO₂ eq. / m²</span>
+        </div>
+        <div class="gwp-scope">Declared unit: 1 m² at 140 mm thickness</div>
+      </div>
+      <div class="view-toggles">
+        <button class="view-toggle active" title="Bar chart"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="3" y="12" width="4" height="9"/><rect x="10" y="5" width="4" height="16"/><rect x="17" y="8" width="4" height="13"/></svg></button>
+        <button class="view-toggle" title="Table"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/></svg></button>
+        <button class="view-toggle" title="Donut"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><line x1="12" y1="3" x2="12" y2="7"/></svg></button>
+      </div>
+    </div>
+
+    <div class="gwp-bars">
+      <div class="gwp-bar-row">
+        <div class="gwp-bar-label"><strong>A1–A3</strong>Product Stage</div>
+        <div class="gwp-bar-track"><div class="gwp-bar-fill" style="width:0%;background:var(--green)" data-target="89"></div></div>
+        <div class="gwp-bar-val">3.42</div>
+      </div>
+      <div class="gwp-bar-row" data-role="planner">
+        <div class="gwp-bar-label"><strong>A4–A5</strong>Construction</div>
+        <div class="gwp-bar-track"><div class="gwp-bar-fill" style="width:0%;background:#EAB308" data-target="24"></div></div>
+        <div class="gwp-bar-val">0.92</div>
+      </div>
+      <div class="gwp-bar-row" data-role="planner">
+        <div class="gwp-bar-label"><strong>C1–C4</strong>End of Life</div>
+        <div class="gwp-bar-track"><div class="gwp-bar-fill" style="width:0%;background:#D4C5B9" data-target="6"></div></div>
+        <div class="gwp-bar-val">0.22</div>
+      </div>
+      <div class="gwp-bar-row" data-role="planner">
+        <div class="gwp-bar-label"><strong>D</strong>Beyond Life Cycle</div>
+        <div class="gwp-bar-track"><div class="gwp-bar-fill" style="width:0%;background:repeating-linear-gradient(135deg,#94A3B8,#94A3B8 2px,#CBD5E1 2px,#CBD5E1 4px)" data-target="31"></div></div>
+        <div class="gwp-bar-val">−1.20</div>
+      </div>
+    </div>
+
+    <div class="gwp-verified-row">
+      <div class="verified-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        Verified by third-party — EN 15804+A2
+      </div>
+      <button class="copy-btn" onclick="navigator.clipboard?.writeText('GWP-total A1-A3: 3.42 kg CO2 eq.')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="1"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copy Impact Data
+      </button>
+    </div>
+
+    <table class="gwp-sub-table">
+      <thead><tr><th>Indicator</th><th>Abbreviation</th><th style="text-align:right">Value</th><th style="text-align:right">Unit</th></tr></thead>
+      <tbody>
+        <tr><td class="td-name">Climate change — total</td><td class="td-abbr">GWP-total</td><td class="td-val">3.42</td><td class="td-unit">kg CO₂ eq.</td></tr>
+        <tr><td class="td-name">Climate change — fossil</td><td class="td-abbr">GWP-fossil</td><td class="td-val">3.38</td><td class="td-unit">kg CO₂ eq.</td></tr>
+        <tr><td class="td-name">Climate change — biogenic</td><td class="td-abbr">GWP-biogenic</td><td class="td-val">0.02</td><td class="td-unit">kg CO₂ eq.</td></tr>
+        <tr><td class="td-name">Climate change — luluc</td><td class="td-abbr">GWP-luluc</td><td class="td-val">0.02</td><td class="td-unit">kg CO₂ eq.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ═══ CPR INDICATORS (PLANNER) ═══ -->
+  <section class="section anim" data-role="planner">
+    <div class="section-header">
+      <div class="section-header-left">
+        <h2 class="section-title">CPR Environmental Indicators</h2>
+        <span class="tier-badge tier-planner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="1"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Planner</span>
+      </div>
+      <span style="font-size:13px;color:var(--text-light);font-weight:500;">19 of 19</span>
+    </div>
+    <div class="accordion-group">
+      <div class="accordion open" data-accordion>
+        <button class="accordion-trigger" aria-expanded="true">
+          <span class="accordion-trigger-left">Phase 1 — GWP <span class="accordion-phase">Jan 2026</span> <span class="phase-badge phase-badge-active">✓ Available</span></span>
+          <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-panel"><div class="accordion-inner">
+          <div class="accordion-note">Mandatory from 8 January 2026</div>
+          <table class="dtable"><thead><tr><th>Indicator</th><th>Abbr.</th><th class="r">Value</th><th class="r">Unit</th></tr></thead><tbody>
+            <tr><td class="td-name">Climate change — total</td><td class="td-abbr">GWP-total</td><td class="td-val">3.42</td><td class="td-unit">kg CO₂ eq.</td></tr>
+            <tr><td class="td-name">Climate change — fossil</td><td class="td-abbr">GWP-fossil</td><td class="td-val">3.38</td><td class="td-unit">kg CO₂ eq.</td></tr>
+            <tr><td class="td-name">Climate change — biogenic</td><td class="td-abbr">GWP-biogenic</td><td class="td-val">0.02</td><td class="td-unit">kg CO₂ eq.</td></tr>
+            <tr><td class="td-name">Climate change — luluc</td><td class="td-abbr">GWP-luluc</td><td class="td-val">0.02</td><td class="td-unit">kg CO₂ eq.</td></tr>
+          </tbody></table>
+        </div></div>
+      </div>
+      <div class="accordion" data-accordion>
+        <button class="accordion-trigger" aria-expanded="false">
+          <span class="accordion-trigger-left">Phase 2 — Core <span class="accordion-phase">Jan 2030</span> <span class="phase-badge phase-badge-ready">Ready ahead of schedule</span></span>
+          <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-panel"><div class="accordion-inner">
+          <div class="accordion-note">Mandatory from 9 January 2030</div>
+          <table class="dtable"><thead><tr><th>Indicator</th><th>Abbr.</th><th class="r">Value</th><th class="r">Unit</th></tr></thead><tbody>
+            <tr><td class="td-name">Ozone depletion</td><td class="td-abbr">ODP</td><td class="td-val">1.24E-07</td><td class="td-unit">kg CFC-11 eq.</td></tr>
+            <tr><td class="td-name">Acidification</td><td class="td-abbr">AP</td><td class="td-val">0.018</td><td class="td-unit">mol H⁺ eq.</td></tr>
+            <tr><td class="td-name">Eutrophication freshwater</td><td class="td-abbr">EP-fw</td><td class="td-val">2.1E-04</td><td class="td-unit">kg P eq.</td></tr>
+            <tr><td class="td-name">Eutrophication marine</td><td class="td-abbr">EP-marine</td><td class="td-val">0.005</td><td class="td-unit">kg N eq.</td></tr>
+            <tr><td class="td-name">Eutrophication terrestrial</td><td class="td-abbr">EP-terr</td><td class="td-val">0.052</td><td class="td-unit">mol N eq.</td></tr>
+            <tr><td class="td-name">Photochemical ozone formation</td><td class="td-abbr">POCP</td><td class="td-val">0.009</td><td class="td-unit">kg NMVOC eq.</td></tr>
+            <tr><td class="td-name">Abiotic depletion — minerals &amp; metals</td><td class="td-abbr">ADP-m&amp;m</td><td class="td-val">3.2E-05</td><td class="td-unit">kg Sb eq.</td></tr>
+            <tr><td class="td-name">Abiotic depletion — fossil</td><td class="td-abbr">ADP-fossil</td><td class="td-val">42.8</td><td class="td-unit">MJ</td></tr>
+            <tr><td class="td-name">Water deprivation</td><td class="td-abbr">WDP</td><td class="td-val">0.28</td><td class="td-unit">m³ world eq.</td></tr>
+          </tbody></table>
+        </div></div>
+      </div>
+      <div class="accordion" data-accordion>
+        <button class="accordion-trigger" aria-expanded="false">
+          <span class="accordion-trigger-left">Phase 3 — All Remaining <span class="accordion-phase">Jan 2032</span> <span class="phase-badge phase-badge-ready">Ready ahead of schedule</span></span>
+          <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-panel"><div class="accordion-inner">
+          <div class="accordion-note">Mandatory from 9 January 2032</div>
+          <table class="dtable"><thead><tr><th>Indicator</th><th>Abbr.</th><th class="r">Value</th><th class="r">Unit</th></tr></thead><tbody>
+            <tr><td class="td-name">Particulate matter</td><td class="td-abbr">PM</td><td class="td-val">2.8E-07</td><td class="td-unit">disease incidence</td></tr>
+            <tr><td class="td-name">Ionizing radiation</td><td class="td-abbr">IRP</td><td class="td-val">0.31</td><td class="td-unit">kBq U-235 eq.</td></tr>
+            <tr><td class="td-name">Ecotoxicity freshwater</td><td class="td-abbr">ETP-fw</td><td class="td-val">18.4</td><td class="td-unit">CTUe</td></tr>
+            <tr><td class="td-name">Human toxicity — cancer</td><td class="td-abbr">HTP-c</td><td class="td-val">1.2E-08</td><td class="td-unit">CTUh</td></tr>
+            <tr><td class="td-name">Human toxicity — non-cancer</td><td class="td-abbr">HTP-nc</td><td class="td-val">1.8E-07</td><td class="td-unit">CTUh</td></tr>
+            <tr><td class="td-name">Land use</td><td class="td-abbr">SQP</td><td class="td-val">4.7</td><td class="td-unit">pt</td></tr>
+          </tbody></table>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MATERIAL COMPOSITION (PUBLIC basic / RECYCLER detailed) ═══ -->
+  <section class="section anim" data-role="public">
+    <div class="section-header">
+      <div class="section-header-left">
+        <h2 class="section-title">Material Composition</h2>
+        <span class="tier-badge tier-public" id="materialAccessBadge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>Public</span>
+      </div>
+    </div>
+    <div class="material-grid">
+      <div class="material-block">
+        <div class="material-block-label">Recycled Content</div>
+        <div class="ring-wrap">
+          <svg viewBox="0 0 160 160">
+            <circle class="ring-track" cx="80" cy="80" r="62"/>
+            <circle class="ring-fill" id="recycledCircle" cx="80" cy="80" r="62" stroke-dasharray="389.56" stroke-dashoffset="389.56"/>
+          </svg>
+          <div class="ring-center">
+            <span class="ring-pct" id="recycledPct">0%</span>
+            <span class="ring-label">by weight</span>
+          </div>
+        </div>
+      </div>
+      <div class="material-block" data-access-roles="recycler,manufacturer,regulator" data-access-mode="hide">
+        <div class="material-block-label">Composition Donut</div>
+        <div class="chart-wrap"><canvas id="materialChart"></canvas></div>
+      </div>
+      <div class="material-block material-lock-card" data-access-roles="public,planner" data-access-mode="hide">
+        <div class="material-lock-card-main">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="1"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <span>Detailed composition available for Recycler access and above</span>
+        </div>
+        <span class="tier-badge tier-recycler"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>Recycler+</span>
+      </div>
+    </div>
+    <div class="reach-note" style="margin-top:16px;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg>
+      <span>Top-level category: Mineral-based product</span>
+    </div>
+    <div class="reach-note" data-access-roles="recycler,manufacturer,regulator" data-access-mode="lock" data-min-role="Recycler">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 4h6v6"/><path d="M10 20H4v-6"/><path d="M20 4l-7 7"/><path d="M4 20l7-7"/></svg>
+      <span>Individual material percentages by weight: Basalt 52%, Recycled briquettes 28%, Dolomite 12%, Binder/Resin 5%, Other additives 3%</span>
+    </div>
+    <div class="reach-note" data-access-roles="recycler,manufacturer,regulator" data-access-mode="lock" data-min-role="Recycler">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18"/><path d="M5 8h14"/><path d="M5 16h14"/></svg>
+      <span>Binder &amp; additive details: phenol-formaldehyde resin with mineral oil and silane coupling package</span>
+    </div>
+    <div class="reach-note" data-access-roles="recycler,manufacturer,regulator" data-access-mode="lock" data-min-role="Recycler">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span>No substances on REACH SVHC Candidate List (&gt;0.1% by mass)</span>
+    </div>
+    <div class="material-details">
+      <div class="material-detail-item" data-access-roles="manufacturer,regulator" data-access-mode="lock" data-min-role="Manufacturer">
+        <div class="material-detail-label">Supplier origin per material</div>
+        <div class="material-detail-value" title="Requires Manufacturer access">Basalt — Steinbruch Eifel GmbH · Binder — BASF SE · Dolomite — Lhoist Group</div>
+        <div class="material-detail-lock" title="Requires Manufacturer access"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="1"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Requires Manufacturer access</div>
+      </div>
+      <div class="material-detail-item" data-access-roles="manufacturer,regulator" data-access-mode="lock" data-min-role="Manufacturer">
+        <div class="material-detail-label">Batch-level composition variance</div>
+        <div class="material-detail-value" title="Requires Manufacturer access">Basalt ±1.2% · Recycled briquettes ±1.8% · Binder ±0.4%</div>
+        <div class="material-detail-lock" title="Requires Manufacturer access"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="1"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Requires Manufacturer access</div>
+      </div>
+      <div class="material-detail-item" data-access-roles="manufacturer" data-access-mode="lock" data-min-role="Manufacturer">
+        <div class="material-detail-label">Internal formulation / recipe</div>
+        <div class="material-detail-value" title="Requires Manufacturer access">Formulation F-RMW-035-L: melt ratio sequence, additive timing, curing profile</div>
+        <div class="material-detail-lock" title="Requires Manufacturer access"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="1"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Requires Manufacturer access</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TECHNICAL PERFORMANCE (PUBLIC) ═══ -->
+  <section class="section anim" data-role="public">
+    <div class="section-header">
+      <div class="section-header-left">
+        <h2 class="section-title">Technical Performance</h2>
+        <span class="tier-badge tier-public"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>Public</span>
+      </div>
+    </div>
+    <table class="specs-table">
+      <tr><td class="spec-lbl">Thermal Conductivity (λ<sub>D</sub>)</td><td><div class="spec-val">0.035 W/mK</div></td></tr>
+      <tr><td class="spec-lbl">Density</td><td><div class="spec-val">30 kg/m³</div></td></tr>
+      <tr><td class="spec-lbl">Fire Classification</td><td><div class="spec-val">A1</div><div class="spec-note">Non-combustible — EN 13501-1</div></td></tr>
+      <tr><td class="spec-lbl">Declared Unit</td><td><div class="spec-val">1 m² at 140 mm</div></td></tr>
+      <tr><td class="spec-lbl">Application</td><td><div class="spec-val">Thermal, acoustic &amp; fire insulation</div><div class="spec-note">Walls, roofs, ceilings</div></td></tr>
+      <tr><td class="spec-lbl">Service Life</td><td><div class="spec-val">&ge; 50 years</div><div class="spec-note">When installed per manufacturer guidelines</div></td></tr>
+    </table>
+  </section>
+
+  <!-- ═══ LIFECYCLE SCOPE (PLANNER) ═══ -->
+  <section class="section anim" data-role="planner">
+    <div class="section-header">
+      <div class="section-header-left">
+        <h2 class="section-title">Lifecycle Scope</h2>
+        <span class="tier-badge tier-planner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="1"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Planner</span>
+      </div>
+    </div>
+    <div class="lc-table-wrap">
+      <table class="lc-table">
+        <thead><tr><th>Module</th><th>A1</th><th>A2</th><th>A3</th><th>A4</th><th>A5</th><th>B1–B7</th><th>C1</th><th>C2</th><th>C3</th><th>C4</th><th>D</th></tr></thead>
+        <tbody><tr><td>Status</td><td class="lc-declared">✓</td><td class="lc-declared">✓</td><td class="lc-declared">✓</td><td class="lc-declared">✓</td><td class="lc-declared">✓</td><td class="lc-mnd">MND</td><td class="lc-declared">✓</td><td class="lc-declared">✓</td><td class="lc-declared">✓</td><td class="lc-declared">✓</td><td class="lc-declared">✓</td></tr></tbody>
+      </table>
+    </div>
+    <p class="lifecycle-note">Cradle-to-grave + Module D (benefits beyond system boundary)</p>
+  </section>
+
+  <!-- ═══ CIRCULARITY (RECYCLER) ═══ -->
+  <section class="section anim" data-role="recycler" data-lockable>
+    <div class="section-header">
+      <div class="section-header-left">
+        <h2 class="section-title">Circularity &amp; End-of-Life</h2>
+        <span class="tier-badge tier-recycler"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>Recycler</span>
+      </div>
+    </div>
+    <div class="locked-section" id="lockCircularity">
+      <div class="locked-bg">
+        <div class="detail-block"><p><strong>Dismantling Instructions</strong></p><p>Rock mineral wool batts can be removed intact from cavity walls, pitched roofs, and suspended ceilings. Use standard PPE. Separate from vapor barriers and fixings before processing.</p></div>
+        <div class="detail-block"><p><strong>Recyclability Assessment</strong></p><p>Material is 98% recyclable via re-melting in cupola furnace. Binder content (5%) is thermally decomposed. No hazardous residues.</p></div>
+        <div class="detail-block"><p><strong>Sortability Index:</strong> A (easily sortable) · <strong>Separability Rating:</strong> 4/5</p></div>
+        <div class="detail-block"><p><strong>Recycling Pathway:</strong> Collection → Sorting → Shredding → Re-melting → New mineral wool production. Closed-loop at Knauf Insulation facilities.</p></div>
+      </div>
+      <div class="locked-fg">
+        <div class="locked-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="1"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <div class="locked-title">Requires Recycler access</div>
+        <div class="locked-desc">Disassembly instructions, sortability index, and recycling pathway data</div>
+        <button class="locked-btn">Request access</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ BIM INTEGRATION (PLANNER) ═══ -->
+  <section class="section anim" data-role="planner" data-lockable>
+    <div class="section-header">
+      <div class="section-header-left">
+        <h2 class="section-title">BIM Integration</h2>
+        <span class="tier-badge tier-planner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="1"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Planner</span>
+      </div>
+    </div>
+    <div class="locked-section" id="lockBim">
+      <div class="locked-bg">
+        <div class="detail-block"><p><strong>IFC Object Download</strong></p><p>IFC 4.0 compliant BIM object. Compatible with Revit 2024+, ArchiCAD 27+, Allplan.</p></div>
+        <div class="detail-block"><p><strong>Dimensional Data</strong></p><p>Thicknesses: 60–200 mm. Board: 1000 × 625 mm. AAS submodel reference: KI-RMW-035-SM-2025.</p></div>
+        <div class="detail-block"><p><strong>Plugin Integration</strong></p><p>Direct import for Autodesk Revit and Graphisoft ArchiCAD with pre-configured layer assignments.</p></div>
+      </div>
+      <div class="locked-fg">
+        <div class="locked-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="1"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <div class="locked-title">Requires Planner access</div>
+        <div class="locked-desc">IFC objects, BIM data, and system build-up references</div>
+        <button class="locked-btn">Request access</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PRODUCTION DATA (MANUFACTURER) ═══ -->
+  <section class="section anim" data-role="manufacturer" data-lockable>
+    <div class="section-header">
+      <div class="section-header-left">
+        <h2 class="section-title">Production Data</h2>
+        <span class="tier-badge tier-manufacturer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20"/><path d="M5 20V8l5-4v16"/><path d="M10 20V4l9 4v12"/><line x1="14" y1="10" x2="14" y2="10.01"/><line x1="17" y1="10" x2="17" y2="10.01"/><line x1="14" y1="14" x2="14" y2="14.01"/><line x1="17" y1="14" x2="17" y2="14.01"/></svg>Manufacturer</span>
+      </div>
+    </div>
+    <div class="locked-section" id="lockProduction">
+      <div class="locked-bg">
+        <div class="detail-block"><p><strong>Batch KI-RMW-035-2025-B0447</strong></p><p>Production: 2025-11-28 · Line 3 · Shift A</p></div>
+        <div class="detail-block"><p><strong>Energy:</strong> 18.4 kWh/m² · <strong>Water:</strong> 2.1 L/m² · <strong>Direct emissions:</strong> 0.42 kg CO₂/m²</p></div>
+        <div class="detail-block"><p><strong>Upstream suppliers:</strong> Basalt — Steinbruch Eifel GmbH · Binder — BASF SE · Dolomite — Lhoist Group</p></div>
+        <div class="detail-block"><p><strong>QA/QC:</strong> Thermal conductivity verified ✓ · Density within spec ✓ · Fire test EN 13501-1 passed ✓</p></div>
+      </div>
+      <div class="locked-fg">
+        <div class="locked-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="1"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <div class="locked-title">Requires Manufacturer access</div>
+        <div class="locked-desc">Batch production data, supplier information, and QA records</div>
+        <button class="locked-btn">Request access</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AUDIT & COMPLIANCE (REGULATOR) ═══ -->
+  <section class="section anim" data-role="regulator" data-lockable>
+    <div class="section-header">
+      <div class="section-header-left">
+        <h2 class="section-title">Audit &amp; Verification</h2>
+        <span class="tier-badge tier-regulator"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Regulator</span>
+      </div>
+    </div>
+    <div class="locked-section" id="lockAudit">
+      <div class="locked-bg">
+        <div class="detail-block"><p><strong>Third-party Verification</strong></p><p>Verified by Marcel Gómez, IBU · Certificate: IBU-VER-2025-04471 · Date: 2025-10-14</p></div>
+        <div class="detail-block"><p><strong>Production Site</strong></p><p>Knauf Insulation GmbH, Industriestraße 8, 09356 St. Egidien · Capacity: 42,000 t/year · ISO 14001 certified</p></div>
+        <div class="detail-block"><p><strong>Deviation Reports</strong></p><p>NCR-2025-012: Minor — binder content 5.3% (spec: 5.0±0.5%) on 2025-09-18 — Resolved, corrective action documented</p></div>
+        <div class="detail-block"><p><strong>Audit Trail</strong></p><p>v1.0 Created 2025-10-20 · v1.1 GWP-biogenic corrected 2025-11-02 · v1.2 Batch B0447 linked 2025-12-15</p></div>
+      </div>
+      <div class="locked-fg">
+        <div class="locked-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="1"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <div class="locked-title">Requires Regulator access</div>
+        <div class="locked-desc">Verification certificates, site data, deviation reports, and full audit trail</div>
+        <button class="locked-btn">Request access</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER META ═══ -->
+  <div class="footer-meta anim">
+    <div class="footer-meta-grid">
+      <div class="footer-field"><div class="footer-field-label">Passport ID</div><div class="footer-field-value">DPP-KI-RMW-035-2025-001</div></div>
+      <div class="footer-field"><div class="footer-field-label">Program Operator</div><div class="footer-field-value">EPD International</div></div>
+      <div class="footer-field"><div class="footer-field-label">EPD Number</div><div class="footer-field-value">S-P-03779</div></div>
+      <div class="footer-field"><div class="footer-field-label">Data Source</div><div class="footer-field-value">Verified EPD (EN 15804+A2)</div></div>
+      <div class="footer-field"><div class="footer-field-label">Last Updated</div><div class="footer-field-value">December 15, 2025</div></div>
+      <div class="footer-field"><div class="footer-field-label">DoPC Reference</div><div class="footer-field-value">DoPC-KI-RMW-035-2025</div></div>
+      <div class="footer-field"><div class="footer-field-label">GTIN</div><div class="footer-field-value">4003950138263</div></div>
+      <div class="footer-field"><div class="footer-field-label">Compliances</div><div class="footer-badges"><span class="footer-badge">EN 15804+A2</span><span class="footer-badge">ISO 14025</span></div></div>
+      <div class="footer-field"><div class="footer-field-label">Standards</div><div class="footer-badges"><span class="footer-badge">EU CPR 2024/3110</span><span class="footer-badge">ESPR 2024/1781</span></div></div>
+    </div>
+    <div class="brand-block">
+      <div class="brand-block-left">
+        <div class="brand-logo-icon"><svg viewBox="0 0 14 14" fill="none"><rect width="14" height="14" fill="#D9F91C"/><rect x="4" y="4" width="5" height="2" fill="#465047"/><rect x="4" y="6.5" width="3" height="2" fill="#465047"/><rect x="4" y="9" width="5" height="2" fill="#465047"/></svg></div>
+        <div><div class="brand-name">Emidat</div><div class="brand-tagline">The Data OS for Sustainable Construction</div></div>
+      </div>
+      <div id="footerQr"></div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="page-footer">
+  <div class="page-footer-links"><a href="#">Imprint</a><a href="#">Privacy Policy</a></div>
+  <div class="page-footer-copy">&copy; 2026 Emidat &mdash; All rights reserved</div>
+</footer>
+
+<!-- ═══ ROLE SWITCHER BAR ═══ -->
+<div class="role-bar">
+  <div class="role-bar-inner">
+    <div class="role-bar-label">Viewing as</div>
+    <div class="role-tabs">
+      <button class="role-tab active" data-r="public">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        Public
+      </button>
+      <button class="role-tab" data-r="planner">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="1"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        Planner
+      </button>
+      <button class="role-tab" data-r="recycler">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+        Recycler
+      </button>
+      <button class="role-tab" data-r="manufacturer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20"/><path d="M5 20V8l5-4v16"/><path d="M10 20V4l9 4v12"/><line x1="14" y1="10" x2="14" y2="10.01"/><line x1="17" y1="10" x2="17" y2="10.01"/></svg>
+        Manufacturer
+      </button>
+      <button class="role-tab" data-r="regulator">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Regulator
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  // ═══ Role hierarchy: which roles can see which tier ═══
+  // Each role unlocks its own tier plus all tiers below in the access lattice.
+  // The lattice is NOT strictly linear: planner and recycler are parallel branches.
+  // manufacturer sees both branches; regulator sees everything.
+  const ACCESS = {
+    public:       ['public'],
+    planner:      ['public', 'planner'],
+    recycler:     ['public', 'recycler'],
+    manufacturer: ['public', 'planner', 'recycler', 'manufacturer'],
+    regulator:    ['public', 'planner', 'recycler', 'manufacturer', 'regulator'],
+  };
+
+  let currentRole = 'public';
+
+  function updateMaterialBadge(role) {
+    const badge = document.getElementById('materialAccessBadge');
+    if (!badge) return;
+
+    const badges = {
+      public: {
+        cls: 'tier-mixed',
+        text: 'Public / Recycler+',
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18"/><circle cx="8" cy="12" r="4"/><rect x="13" y="8" width="8" height="8" rx="1"/></svg>'
+      },
+      planner: {
+        cls: 'tier-mixed',
+        text: 'Public / Recycler+',
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18"/><circle cx="8" cy="12" r="4"/><rect x="13" y="8" width="8" height="8" rx="1"/></svg>'
+      },
+      recycler: {
+        cls: 'tier-mixed',
+        text: 'Recycler / Manufacturer+',
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18"/><polyline points="4 8 8 4 12 8"/><path d="M15 16h6"/></svg>'
+      },
+      manufacturer: {
+        cls: 'tier-manufacturer',
+        text: 'Manufacturer',
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20"/><path d="M5 20V8l5-4v16"/><path d="M10 20V4l9 4v12"/></svg>'
+      },
+      regulator: {
+        cls: 'tier-mixed',
+        text: 'Regulator / Manufacturer-only',
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18"/><path d="M12 4v16"/><circle cx="12" cy="12" r="2"/></svg>'
+      }
+    };
+
+    const state = badges[role] || badges.public;
+    badge.className = `tier-badge ${state.cls}`;
+    badge.innerHTML = `${state.icon}${state.text}`;
+  }
+
+  function applyRole(role) {
+    currentRole = role;
+    const visible = new Set(ACCESS[role]);
+
+    // Update tabs
+    document.querySelectorAll('.role-tab').forEach(t => {
+      t.classList.toggle('active', t.dataset.r === role);
+    });
+
+    // Sections and elements with data-role
+    document.querySelectorAll('[data-role]').forEach(el => {
+      const requiredRole = el.dataset.role;
+      const canSee = visible.has(requiredRole);
+
+      // For lockable sections: toggle lock overlay instead of hiding
+      if (el.hasAttribute('data-lockable')) {
+        el.classList.remove('role-hidden');
+        const lockDiv = el.querySelector('.locked-section');
+        if (lockDiv) {
+          lockDiv.classList.toggle('role-locked', !canSee);
+          lockDiv.classList.toggle('role-unlocked', canSee);
+        }
+        return;
+      }
+
+      // For inline locked fields (within visible parent)
+      const unlocked = el.querySelector('[data-unlocked]');
+      const locked = el.querySelector('[data-locked-for]');
+      if (unlocked && locked) {
+        if (canSee) {
+          unlocked.style.display = '';
+          locked.style.display = 'none';
+        } else {
+          unlocked.style.display = 'none';
+          locked.style.display = '';
+        }
+        // Always show the field row itself so the label is visible
+        el.classList.remove('role-hidden');
+        return;
+      }
+
+      // Default: show/hide
+      el.classList.toggle('role-hidden', !canSee);
+    });
+
+    // Fine-grained Material Composition access handling
+    document.querySelectorAll('[data-access-roles]').forEach(el => {
+      const allowed = new Set(el.dataset.accessRoles.split(',').map(v => v.trim()).filter(Boolean));
+      const mode = el.dataset.accessMode || 'hide';
+      const canAccess = allowed.has(role);
+
+      if (mode === 'hide') {
+        el.classList.toggle('role-hidden', !canAccess);
+        return;
+      }
+
+      el.classList.remove('role-hidden');
+      el.classList.toggle('is-locked', !canAccess);
+      if (!canAccess) {
+        const minRole = el.dataset.minRole ? `Requires ${el.dataset.minRole} access` : 'Insufficient access';
+        el.setAttribute('title', minRole);
+      } else {
+        el.removeAttribute('title');
+      }
+    });
+
+    updateMaterialBadge(role);
+
+    // Re-trigger bar animations for newly visible bars
+    animateBars();
+  }
+
+  // ── Role tab clicks ──
+  document.querySelectorAll('.role-tab').forEach(tab => {
+    tab.addEventListener('click', () => applyRole(tab.dataset.r));
+  });
+
+  // ── Accordions ──
+  document.querySelectorAll('[data-accordion]').forEach(acc => {
+    acc.querySelector('.accordion-trigger').addEventListener('click', () => {
+      const open = acc.classList.toggle('open');
+      acc.querySelector('.accordion-trigger').setAttribute('aria-expanded', open);
+    });
+  });
+
+  // ── GWP counter ──
+  function countUp(el, target, ms) {
+    const t0 = performance.now();
+    (function tick(now) {
+      const p = Math.min((now - t0) / ms, 1);
+      el.textContent = (target * (1 - Math.pow(1 - p, 3))).toFixed(2);
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0);
+  }
+
+  // ── Recycled ring ──
+  function animateRing(pct) {
+    const c = document.getElementById('recycledCircle');
+    const lbl = document.getElementById('recycledPct');
+    const circ = 2 * Math.PI * 62;
+    c.style.strokeDashoffset = circ * (1 - pct / 100);
+    const t0 = performance.now();
+    (function tick(now) {
+      const p = Math.min((now - t0) / 1200, 1);
+      lbl.textContent = Math.round(pct * (1 - Math.pow(1 - p, 3))) + '%';
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0);
+  }
+
+  // ── Bar animation ──
+  function animateBars() {
+    document.querySelectorAll('.gwp-bar-fill').forEach(bar => {
+      if (bar.closest('.role-hidden')) return;
+      const target = bar.dataset.target;
+      setTimeout(() => { bar.style.width = target + '%'; }, 100);
+    });
+  }
+
+  // ── Intersection observer ──
+  let gwpDone = false, ringDone = false, barsDone = false;
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('visible');
+      if (!gwpDone && e.target.querySelector('#gwpCounter')) {
+        gwpDone = true;
+        countUp(document.getElementById('gwpCounter'), 3.42, 1500);
+      }
+      if (!barsDone && e.target.querySelector('.gwp-bars')) {
+        barsDone = true;
+        animateBars();
+      }
+      if (!ringDone && e.target.querySelector('#recycledCircle')) {
+        ringDone = true;
+        setTimeout(() => animateRing(58), 100);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.anim').forEach(el => io.observe(el));
+
+  // ── Material chart ──
+  new Chart(document.getElementById('materialChart'), {
+    type: 'doughnut',
+    data: {
+      labels: ['Basalt / volcanic rock', 'Recycled briquettes', 'Dolomite', 'Binder (resin)', 'Other additives'],
+      datasets: [{
+        data: [52, 28, 12, 5, 3],
+        backgroundColor: ['#D4F542', '#EAB308', '#D4C5B9', '#94A3B8', '#CBD5E1'],
+        borderWidth: 2, borderColor: '#fff', hoverOffset: 3
+      }]
+    },
+    options: {
+      cutout: '60%', responsive: true, maintainAspectRatio: true,
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: { boxWidth: 8, boxHeight: 8, padding: 7, font: { family: 'Inter', size: 10, weight: '500' }, color: '#6B7280', usePointStyle: true, pointStyle: 'circle' }
+        },
+        tooltip: {
+          callbacks: { label: c => c.label + ': ' + c.parsed + '%' },
+          titleFont: { family: 'Inter', size: 12 }, bodyFont: { family: 'Inter', size: 11 },
+          backgroundColor: '#111827', padding: 8,
+        }
+      }
+    }
+  });
+
+  // ── QR Code ──
+  try {
+    const qr = qrcode(0, 'M');
+    qr.addData('https://dpp.earth/4003950138263');
+    qr.make();
+    const img = new Image();
+    img.src = qr.createDataURL(3, 6);
+    img.alt = 'QR Code';
+    img.width = 72; img.height = 72;
+    document.getElementById('footerQr').appendChild(img);
+  } catch(e) {}
+
+  // ── Initialize default role ──
+  applyRole('public');
+
+})();
+</script>
+</body>
+</html>
