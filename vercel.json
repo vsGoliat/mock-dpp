@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/assets/(.*)",
+      "destination": "/mock-dpp/assets/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/mock-dpp/index.html"
+    }
+  ]
+}
