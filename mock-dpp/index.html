@@ -49,6 +49,11 @@
       background: var(--bg-card);
       border: 1px solid var(--border);
       padding: 32px;
+      overflow: hidden;
+    }
+    .table-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
     }
     @media (max-width: 520px) { .card-main { padding: 20px 16px; } }
 
@@ -157,7 +162,7 @@
     .doc-link svg { width: 14px; height: 14px; color: var(--text-light); }
 
     /* ─── Sections ─── */
-    .section { padding: 28px 0; border-top: 1px solid var(--border); }
+    .section { padding: 28px 0; border-top: 1px solid var(--border); min-width: 0; }
     .section-header {
       display: flex;
       align-items: center;
@@ -221,7 +226,7 @@
       user-select: none;
       pointer-events: none;
     }
-    .locked-bg p { font-size: 13px; color: var(--text-muted); margin-bottom: 6px; line-height: 1.5; }
+    .locked-bg p { font-size: 13px; color: var(--text-muted); margin-bottom: 6px; line-height: 1.5; overflow-wrap: anywhere; word-break: break-word; }
     .locked-bg strong { color: var(--text-secondary); }
     .locked-fg {
       position: absolute; inset: 0;
@@ -335,7 +340,7 @@
     .accordion.open .accordion-chevron { transform: rotate(180deg); }
     .accordion-panel { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
     .accordion.open .accordion-panel { max-height: 1400px; }
-    .accordion-inner { padding: 0 14px 14px; }
+    .accordion-inner { padding: 0 14px 14px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .accordion-note { font-size: 11px; color: var(--text-light); margin-bottom: 10px; }
 
     .phase-badge { display: inline-block; padding: 2px 8px; font-size: 10px; font-weight: 600; background: var(--bg-surface); border: 1px solid var(--border); color: var(--text-muted); }
@@ -367,8 +372,9 @@
     .ring-pct { font-size: 30px; font-weight: 700; line-height: 1; }
     .ring-label { font-size: 11px; color: var(--text-light); font-weight: 500; margin-top: 2px; }
     .chart-wrap { width: 100%; max-width: 210px; margin: 0 auto; }
-    .reach-note { display: flex; align-items: center; gap: 8px; margin-top: 20px; padding: 10px 12px; background: var(--bg-surface); border: 1px solid var(--border-light); font-size: 12px; color: var(--text-muted); }
+    .reach-note { display: flex; align-items: center; gap: 8px; margin-top: 20px; padding: 10px 12px; background: var(--bg-surface); border: 1px solid var(--border-light); font-size: 12px; color: var(--text-muted); flex-wrap: wrap; min-width: 0; }
     .reach-note svg { flex-shrink: 0; width: 16px; height: 16px; color: var(--success); }
+    .reach-note span { min-width: 0; overflow-wrap: anywhere; word-break: break-word; }
     .reach-note.is-locked { background: #F8FAFC; border-color: #E2E8F0; position: relative; }
     .reach-note.is-locked span { filter: blur(1.8px); user-select: none; color: #94A3B8; }
     .reach-note.is-locked::after {
@@ -377,6 +383,8 @@
       font-size: 11px;
       font-weight: 600;
       color: var(--text-light);
+      white-space: nowrap;
+      flex-shrink: 0;
     }
     .material-details {
       margin-top: 22px;
@@ -387,10 +395,12 @@
       display: flex;
       align-items: baseline;
       justify-content: space-between;
-      gap: 16px;
+      gap: 8px 16px;
       padding: 10px 12px;
       border: 1px solid var(--border-light);
       background: #fff;
+      flex-wrap: wrap;
+      min-width: 0;
     }
     .material-detail-label {
       font-size: 12px;
@@ -489,7 +499,7 @@
     @media (max-width: 520px) { .footer-meta-grid { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 380px) { .footer-meta-grid { grid-template-columns: 1fr; } }
     .footer-field-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-light); margin-bottom: 4px; }
-    .footer-field-value { font-size: 13px; font-weight: 500; color: var(--text-secondary); }
+    .footer-field-value { font-size: 13px; font-weight: 500; color: var(--text-secondary); overflow-wrap: anywhere; word-break: break-word; }
     .footer-badges { display: flex; flex-wrap: wrap; gap: 4px; }
     .footer-badge { display: inline-block; padding: 3px 8px; font-size: 11px; font-weight: 500; background: var(--bg-surface); border: 1px solid var(--border); color: var(--text-muted); }
 
@@ -597,15 +607,8 @@
       .gwp-total-num { font-size: 24px; }
       .gwp-sub-table,
       .dtable {
-        display: block;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        min-width: 520px;
+        min-width: 480px;
       }
-      .gwp-sub-table th,
-      .gwp-sub-table td,
-      .dtable th,
-      .dtable td { padding-left: 8px; padding-right: 8px; }
       .material-detail-item {
         flex-direction: column;
         align-items: flex-start;
@@ -832,6 +835,7 @@
       </button>
     </div>
 
+    <div class="table-scroll">
     <table class="gwp-sub-table">
       <thead><tr><th>Indicator</th><th>Abbreviation</th><th style="text-align:right">Value</th><th style="text-align:right">Unit</th></tr></thead>
       <tbody>
@@ -841,6 +845,7 @@
         <tr><td class="td-name">Climate change — luluc</td><td class="td-abbr">GWP-luluc</td><td class="td-val">0.02</td><td class="td-unit">kg CO₂ eq.</td></tr>
       </tbody>
     </table>
+    </div>
   </section>
 
   <!-- ═══ CPR INDICATORS (PLANNER) ═══ -->
